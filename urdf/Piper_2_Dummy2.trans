@@ -67,12 +67,12 @@
   </actuator>
 </transmission>
 
-<transmission name="Slider _9_R_tran">
+<transmission name="Slider_9_R_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Slider _9_R">
+  <joint name="Slider_9_R">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Slider _9_R_actr">
+  <actuator name="Slider_9_R_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>

@@ -445,7 +445,7 @@
   </collision>
 </link>
 
-<link name="墊片_v3_1">
+<link name="shim">
   <inertial>
     <origin xyz="-2.603155605204514e-13 0.04987462633751475 0.022990960314565406" rpy="0 0 0"/>
     <mass value="0.5238023470564825"/>
@@ -454,14 +454,14 @@
   <visual>
     <origin xyz="0.0 0.05 -0.0708" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Piper_2_Dummy2_description)/meshes/墊片_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find Piper_2_Dummy2_description)/meshes/shim.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.0 0.05 -0.0708" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Piper_2_Dummy2_description)/meshes/墊片_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find Piper_2_Dummy2_description)/meshes/shim.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -592,7 +592,7 @@
   </collision>
 </link>
 
-<link name="435_支架_v2_1">
+<link name="bracket_435">
   <inertial>
     <origin xyz="-7.328758401016489e-08 0.00408106128329172 -1.0980955755801602e-08" rpy="0 0 0"/>
     <mass value="0.09782622179527696"/>
@@ -601,14 +601,14 @@
   <visual>
     <origin xyz="-0.013149 -0.26281 -0.452482" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Piper_2_Dummy2_description)/meshes/435_支架_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find Piper_2_Dummy2_description)/meshes/bracket_435.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.013149 -0.26281 -0.452482" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Piper_2_Dummy2_description)/meshes/435_支架_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find Piper_2_Dummy2_description)/meshes/bracket_435.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -688,7 +688,7 @@
   <child link="piper_hand_1"/>
 </joint>
 
-<joint name="Slider _9_R" type="prismatic">
+<joint name="Slider_9_R" type="prismatic">
   <origin xyz="${0} ${0} ${0}" rpy="0 0 0"/>
   <parent link="piper_hand_1"/>
   <child link="piper_right_1"/>
@@ -786,15 +786,15 @@
   <child link="piper_R_base_1"/>
 </joint>
 
-<joint name="Rigid 77" type="fixed">
+<joint name="Rigid_77" type="fixed">
   <origin xyz="0.0 -0.05 0.0708" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="墊片_v3_1"/>
+  <child link="shim"/>
 </joint>
 
 <joint name="Rigid 78" type="fixed">
   <origin xyz="0.0 0.0 0.026" rpy="0 0 0"/>
-  <parent link="墊片_v3_1"/>
+  <parent link="shim"/>
   <child link="dummy2_link0_v1_1"/>
 </joint>
 
@@ -841,14 +841,14 @@
 <joint name="Revolute 84" type="revolute">
   <origin xyz="-0.021 0.1185 0.0" rpy="0 0 0"/>
   <parent link="link6_v1_1"/>
-  <child link="435_支架_v2_1"/>
+  <child link="bracket_435"/>
   <axis xyz="0.0 -1.0 -0.0"/>
   <limit upper="3.141593" lower="-3.141593" effort="100" velocity="100"/>
 </joint>
 
 <joint name="Rigid 85" type="fixed">
   <origin xyz="0.0225 0.007 0.0" rpy="0 0 0"/>
-  <parent link="435_支架_v2_1"/>
+  <parent link="bracket_435"/>
   <child link="RealSense_D435_v1_1"/>
 </joint>
 
